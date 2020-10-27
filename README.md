@@ -9,7 +9,7 @@ Your mission, should you choose to accept it, has two parts:
 ## Part 1:
 ##### Endpoint: POST /mission
 Body: 
-```json
+```
 {“agent”: “[codename]”, “country”: “[country]”, “address”: “[address string]”, “date”: “[date and time]”}
 ```
 Adds a mission.
@@ -32,7 +32,7 @@ Part 3:
 Find the closest mission from a specific address (any existing mission’s address)
 
 ##### Endpoint: POST /find-closest
-```json
+```
  Body: {“target-location”: “[an address or geo coordinates]”}
 ```
 
