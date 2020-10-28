@@ -1,5 +1,14 @@
 # StatisticsAPI
 
+## Prerquisites
+* Mongo 
+## How to run
+1. Git clone
+2. Run mongo
+3. Insert into appsettings.json Google's geocoding API key
+4. Build and run
+ 
+## Description of the Challenge
 Recommendation: read everything before you start to implement.
 
 Good morning, Agent. 
