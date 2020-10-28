@@ -9,6 +9,7 @@ namespace StatisticsAPI.Model
         [JsonPropertyName("target-location")]
         [Display(Name = "target-location")]
         [BindRequired]
+        [Required]
         public string TargetLocation { get; set; }
     }
 }

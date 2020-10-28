@@ -9,8 +9,8 @@ namespace StatisticsAPI.Controllers
     [Route("/")]
     public class MissionController : ControllerBase
     {
-        private readonly IMissionService _missionService;
         private readonly GeocodingAPI _geocodingApi;
+        private readonly IMissionService _missionService;
 
         public MissionController(IMissionService missionService, GeocodingAPI geocodingApi)
         {
@@ -19,7 +19,7 @@ namespace StatisticsAPI.Controllers
         }
 
         [HttpPost]
-        [Route("mission")]
+        [Route("/mission")]
         public IActionResult Post(Mission newMission)
         {
             try
@@ -56,10 +56,7 @@ namespace StatisticsAPI.Controllers
             {
                 var coordinates = _geocodingApi.GetCoordinates(addressInput.TargetLocation);
 
-                if (coordinates is null)
-                {
-                    return NotFound("could not find given address");
-                }
+                if (coordinates is null) return NotFound("could not find given address");
 
                 var mission = _missionService.FIndNearestMission(coordinates);
                 return Ok(mission);

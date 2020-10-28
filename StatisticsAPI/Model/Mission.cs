@@ -1,4 +1,4 @@
-using System;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
@@ -17,15 +17,14 @@ namespace StatisticsAPI.Model
         [JsonIgnore]
         public string Id { get; set; }
 
-        public string Agent { get; set; }
+        [Required] public string Agent { get; set; }
 
-        public string Country { get; set; }
+        [Required] public string Country { get; set; }
 
-        public string Address { get; set; }
+        [Required] public string Address { get; set; }
 
-        public string Date { get; set; }
+        [Required] public string Date { get; set; }
 
-        [JsonIgnore]
-        public GeoJsonPoint<GeoJson2DCoordinates> Location { get; set; }
+        [JsonIgnore] public GeoJsonPoint<GeoJson2DCoordinates> Location { get; set; }
     }
 }
