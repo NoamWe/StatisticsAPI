@@ -29,6 +29,7 @@ namespace StatisticsAPI.Controllers
             }
             catch (Exception e)
             {
+                // will log e.message
                 return StatusCode(500);
             }
         }
@@ -44,6 +45,7 @@ namespace StatisticsAPI.Controllers
             }
             catch (Exception e)
             {
+                // will log e.message
                 return StatusCode(500);
             }
         }
@@ -63,6 +65,7 @@ namespace StatisticsAPI.Controllers
             }
             catch (Exception e)
             {
+                // will log e.message
                 return StatusCode(500);
             }
         }
