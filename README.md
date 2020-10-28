@@ -6,6 +6,7 @@
 1. Git clone
 2. Run mongo
 3. Insert into appsettings.json Google's geocoding API key
+4. Insert into appsettings.json your mongo connection string
 4. Build and run
  
 ## Description of the Challenge
